@@ -4,8 +4,6 @@ RUN mkdir /rstudio
 
 WORKDIR /rstudio
 
-COPY dependencies.json /rstudio
-
 RUN R -e "install.packages(c('lubridate'))"
 
 COPY ./r_kode /rstudio
